@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AIML Web Project</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>AIML Smart Web System</h1>
+
+    <h2>Face Detection</h2>
+    <form action="/face" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" required>
+        <button type="submit">Detect Face</button>
+    </form>
+
+    <h2>Sentiment Analysis</h2>
+    <form action="/sentiment" method="post">
+        <textarea name="text" required></textarea>
+        <button type="submit">Analyze</button>
+    </form>
+
+    <h2>Speech to Text</h2>
+    <a href="/speech"><button>Start Speech</button></a>
+
+    <h2>Motion Tracking</h2>
+<a href="/motion">
+    <button>Start Motion Tracking</button>
+</a>
+
+<h2>Text to Audio (Text to Speech)</h2>
+<form action="/text_to_audio" method="post">
+    <textarea name="audio_text" placeholder="Enter text to convert into audio" required></textarea>
+    <br>
+    <button type="submit">Convert to Audio</button>
+</form>
+
+
+</body>
+</html>
